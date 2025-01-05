@@ -45,3 +45,27 @@ const leaderInArrayOptimized = (arr, n) => {
 let arr2 = [12, 21, 50, 30, 10, 5];
 let n2 = arr2.length;
 console.log("Optimized Leaders:", leaderInArrayOptimized(arr2, n2));
+
+
+// by Using ForEach method
+
+
+
+
+const leaderInArrayForEach = (arr) => {
+    let leaders = [];
+    let maxRight = arr[arr.length - 1];
+    
+    arr.slice().reverse().forEach((element) => {    // slice used for creating shadow copy of original array avoid the mutation in original array.
+        if (element >= maxRight) {
+            maxRight = element;
+            leaders.push(element);
+        }
+    });
+
+    return leaders.reverse(); // Reverse to maintain original order
+};
+
+let arr3 = [12, 21, 50, 30, 10, 5];
+console.log("Leaders using forEach:", leaderInArrayForEach(arr1));
+
