@@ -18,7 +18,7 @@ for(let key in Person){
     console.log(`This is key of Object ${key} the Value of the key is ${Person[key]}`);
 }
 
-*/
+
 
 const data =  "Optimizaum";
 
@@ -40,4 +40,18 @@ for(let i of count){
 }
 
 console.log(maxCount);
+   */
+console.log("A");
+
+setTimeout(() => {
+    console.log("B");
+}, 0);
+
+Promise.all([Promise.resolve().then(() => {
+    console.log("Hi");
+})]);
+
+console.log("C");
+
+
 
