@@ -19,15 +19,19 @@ function longestPalindrome(s) {
         let len2 = expandAroundCenter(i, i + 1);
         let maxLength = Math.max(len1, len2);
 
-        // Update the start and end pointers if a longer palindrome is found
+        // Update the start and end pointers if a longer palindrome is found.
         if (maxLength > end - start) {
             start = i - Math.floor((maxLength - 1) / 2);
             end = i + Math.floor(maxLength / 2);
         }
     }
 
-    return s.substring(start, end + 1); // Extract the longest palindrome
-}
+    return s.substring(start, end + 1); // Extract the longest palindrome.
+} 
 
 
-console.log(longestPalindrome("babad")); // Output: "bab" or "aba"
+console.log(longestPalindrome("cbbd")); 
+
+console.log(longestPalindrome("cabad")); 
+ 
+ 
