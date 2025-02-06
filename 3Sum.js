@@ -20,7 +20,6 @@ var threeSumClosest = function(nums, target) {
             } else if (currentSum > target) {
                 right--;
             } else {
-                // Exact match
                 return currentSum;
             }
         }
